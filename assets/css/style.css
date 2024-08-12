@@ -1527,7 +1527,7 @@ p {
   height: 100vh;
   z-index: 97;
   padding: 13rem 3rem 5rem 4rem;
-  background: #fff;
+  background: #c552ec;
 }
 @supports (height: 100lvh) {
   .cb-navbar-menu {
@@ -4270,7 +4270,7 @@ p {
   position: relative;
 }
 .cb-featured-header {
-  font-size: 6.1rem;
+  font-size: 6.1rem !important;
   line-height: 90%;
   letter-spacing: -0.03em;
 }
@@ -4829,7 +4829,7 @@ p {
   margin-bottom: 0;
 }
 .cb-summary-action {
-  margin: 4rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 @media (min-width: 768px) {
   .cb-summary-action {
@@ -5572,7 +5572,7 @@ blockquote .cb-overview-text p:last-of-type:after {
 }
 .cb-outro-header {
   margin-bottom: 5rem;
-  font-size: 6.8rem;
+  font-size: 6.8rem !important;
   line-height: 77%;
   letter-spacing: -0.05em;
 }
@@ -6151,7 +6151,32 @@ div#content {
 .hide_desktop {
   display: none;
 }
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure the video is behind other content */
+  overflow: hidden;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
 
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire container */
+}
+
+/* Content overlay styling */
+.content-overlay {
+  position: relative; /* Positioned relative to the wrapper */
+  z-index: 2; /* Ensure content is on top of the video */
+  padding: 20px; /* Adjust padding as needed */
+  color: #fff; /* Ensure text is visible on top of the video */
+  padding: 10rem 0;
+}
 .wrapper,
 .wrapper-full,
 .wrapper-small {
@@ -6194,7 +6219,7 @@ div#content {
   position: relative;
   background-size: cover;
   background-position: center;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 .section.no-padding {
@@ -6576,4 +6601,271 @@ section:after {
 .nayla-infinite-tabs .tab-content.active {
   opacity: 1;
   display: block;
+}
+
+.hero-section-unique {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content wrapper styling */
+.hero-content-unique {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 100%;
+  height: 100%;
+}
+
+/* Background video styling */
+.bg-video-unique {
+  position: absolute; /* Use absolute positioning */
+  width: 70%;
+  height: 80%;
+  z-index: 1; /* Keep the video behind other content */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid rgb(27, 27, 27); /* Solid border with a dark color */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(237, 12, 245, 0.2); /* Shadow with offset, blur, and color */
+}
+
+.bg-video-unique video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container */
+}
+
+/* Overlay styling */
+.overlay-unique {
+  position: absolute; /* Positioned on top of the video */
+  top: 4rem !important;
+  left: 10rem;
+  width: 45%;
+  height: 45%;
+  /* background: rgb(255, 255, 255); Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4; /* Positioned above the video but below other content */
+}
+:root {
+  --gap: 1rem;
+}
+
+.container {
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0 !important;
+}
+
+.marquee {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  gap: var(--gap);
+  transform: rotate(0deg);
+}
+
+.marquee ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  animation: marquee 8s linear infinite;
+  margin: 0 !important;
+}
+
+.text {
+  background: linear-gradient(to right, #5a595a, #232323, #121212);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 300;
+  font-size: 25ch;
+}
+.border {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 3px black;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+.marquee-img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 0 2rem 2rem;
+}
+.second-section {
+  padding-top: 25rem;
+}
+
+.edge-top-figure-1 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 15%;
+  overflow: hidden;
+  /* background: var(--zarak-gold); */
+}
+
+.edge-top-figure-1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 160%;
+  height: 520%;
+  /* background: var(--color-dark-1); */
+  background-color: white;
+  border-radius: 100%;
+}
+.nous-black {
+  background-color: #000;
+}
+#canvas-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999 !important;
+  background-color: white;
+}
+
+/* General section styles */
+.about-us1 {
+  padding: 0 20px 10rem 20px; /* Adjust padding as needed */
+  background-color: #f9f9f9; /* Light background color */
+  z-index: 98;
+}
+
+/* Content wrapper */
+.section-content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.container1 {
+  max-width: 1200px; /* Adjust as needed */
+  width: 100%;
+}
+
+/* Grid layout */
+.grid1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px; /* Space between columns */
+}
+
+/* Grid columns */
+.grid-col1 {
+  flex: 1;
+  min-width: 300px; /* Minimum width for responsiveness */
+}
+
+.grid-col-left1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-col-right1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3rem;
+}
+
+/* Media wrapper */
+.media-wrapper1 {
+  width: 100%;
+  height: 500px;
+}
+
+/* Brief info styles */
+.brief-info1 {
+  margin-bottom: 20px;
+}
+.brief-info1 p {
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 110%;
+  width: 30vw;
+  margin-left: 8rem;
+}
+
+/* CTA Action styles */
+.cta-action1 {
+  margin-top: 0px;
+  margin-left: 2rem;
+}
+
+/* CTA Button styles */
+.cta-button1 {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button1 .cta-border1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.cta-button1 .cta-ripple1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear;
+}
+
+.cta-button1 .cta-title1 {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+.tsparticle-unique {
+  z-index: -1;
 }
