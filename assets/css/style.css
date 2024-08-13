@@ -6884,7 +6884,7 @@ section:after {
 .c-cl {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping */
-  font-size: 210px; /* Large font size */
+  font-size: 120px; /* Large font size */
   line-height: 1; /* Ensure line height doesn't affect the layout */
   text-transform: uppercase;
   color: rgb(208, 73, 223);
@@ -6914,4 +6914,7 @@ section:after {
 .t2 {
   position: absolute;
   top: 36rem;
+}
+.laptop {
+  width: 50vw !important;
 }
