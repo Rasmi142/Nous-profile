@@ -50,7 +50,7 @@ const loader = new GLTFLoader();
 let object;
 
 loader.load(
-  `models/desktop_pc/scene.gltf`,
+  `models/planet/scene.gltf`,
   function (gltf) {
     console.log("3D model loaded successfully");
     object = gltf.scene;
@@ -122,7 +122,7 @@ function adjustScale() {
   } else {
     console.log("Adjusting scale for large screens");
     if (object) {
-      object.scale.set(8, 8, 8);
+      object.scale.set(60, 60, 60);
       object.position.set(-47, 60, 0);
     }
   }
