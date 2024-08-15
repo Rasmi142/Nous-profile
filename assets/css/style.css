@@ -6151,32 +6151,7 @@ div#content {
 .hide_desktop {
   display: none;
 }
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Ensure the video is behind other content */
-  overflow: hidden;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
-}
 
-.video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the entire container */
-}
-
-/* Content overlay styling */
-.content-overlay {
-  position: relative; /* Positioned relative to the wrapper */
-  z-index: 2; /* Ensure content is on top of the video */
-  padding: 20px; /* Adjust padding as needed */
-  color: #fff; /* Ensure text is visible on top of the video */
-  padding: 10rem 0;
-}
 .wrapper,
 .wrapper-full,
 .wrapper-small {
@@ -6935,4 +6910,148 @@ canvas#neuro {
 }
 .planet {
   z-index: 5 !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(231, 132, 132);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px) !important;
+}
+
+video {
+  width: 80%;
+  height: 80%;
+  max-width: 1000px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+.content-overlay p {
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  line-height: 63px;
+}
+.step-1,
+.step-2,
+.step-3 {
+  margin: 0;
+  background-color: purple;
+  /* padding: 10px; */
+  /* border-radius: 5px; */
+  position: relative;
+}
+
+.step-1 {
+  margin-left: 6rem;
+  width: 100%;
+  max-width: 600px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.step-2 {
+  font-size: 20px;
+  width: 100%;
+  max-width: 450px;
+  left: 50%;
+  margin-left: 6.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translateX(-50%);
+}
+
+.step-3 {
+  font-size: 20px;
+  width: 100%;
+  max-width: 350px;
+  margin-left: 6rem;
+  left: 50%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translateX(-50%);
+  -webkit-text-stroke-width: 3px !important;
+  -webkit-text-stroke-color: white !important;
+  color: purple;
+  letter-spacing: 3px;
+}
+@media (max-width: 768px) {
+  .content-overlay p {
+    font-size: 4vw;
+  }
+
+  .step-1,
+  .step-2,
+  .step-3 {
+    max-width: 100%;
+    font-size: 5vw;
+  }
+
+  .step-1 {
+    margin-left: 3rem;
+    width: 270px;
+  }
+  .step-2 {
+    margin-left: 2rem;
+    width: 250px;
+  }
+
+  .step-3 {
+    width: 200px;
+    margin-left: 2rem;
+    font-size: 6vw;
+    -webkit-text-stroke-width: 1px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-overlay p {
+    font-size: 6vw;
+  }
+
+  .step-1,
+  .step-2,
+  .step-3 {
+    max-width: 100%;
+    font-size: 8vw;
+  }
+
+  .step-3 {
+    font-size: 10vw;
+    -webkit-text-stroke-width: 0.5px !important;
+  }
 }
