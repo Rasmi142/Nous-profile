@@ -28,41 +28,40 @@ controls.enableRotate = false;
 camera.position.set(0, 50, 100);
 
 console.log("Adding lights to the scene");
-const ambientLight = new THREE.AmbientLight(0x333333, 1); // Adjust ambient light intensity if needed
+
+// Add AmbientLight
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Ambient light with moderate intensity
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 2); // Increased intensity
-directionalLight.position.set(500, 500, 500);
+// Add DirectionalLight
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Directional light with high intensity
+directionalLight.position.set(50, 50, 50); // Adjust position to illuminate the object well
 directionalLight.castShadow = true;
+directionalLight.shadow.mapSize.width = 2048; // High resolution shadow map
+directionalLight.shadow.mapSize.height = 2048;
 scene.add(directionalLight);
 
-// Optionally add another light for extra brightness
-const pointLight = new THREE.PointLight(0xffffff, 1, 1000);
-pointLight.position.set(0, 100, 100); // Adjust position
-scene.add(pointLight);
+// Optional: Add a HemisphereLight
+const hemisphereLight = new THREE.HemisphereLight(0xaaaaaa, 0x000000, 0.3); // Sky color, ground color, intensity
+scene.add(hemisphereLight);
 
 console.log("Loading 3D model");
 const loader = new GLTFLoader();
 let object;
 
 loader.load(
-  `models/desktop_pc/scene.gltf`,
+  `models/voxel_web_development/scene.gltf`,
   function (gltf) {
     console.log("3D model loaded successfully");
     object = gltf.scene;
-    object.scale.set(23, 23, 23);
-    object.position.set(-67, 28, 0);
+    object.scale.set(5, 5, 5);
+    object.position.set(-22, 28, 0);
 
     object.traverse((child) => {
       if (child.isMesh) {
         console.log("Setting up shadows for child mesh");
         child.castShadow = true;
         child.receiveShadow = true;
-
-        // Adjust material properties to increase brightness
-        child.material.color.set("#ffffff"); // Set a lighter color
-        child.material.emissive.set("#000"); // Add emissive color to make it glow
-        child.material.emissiveIntensity = 0.5; // Adjust emissive intensity
       }
     });
 
@@ -117,14 +116,14 @@ function adjustScale() {
   ) {
     console.log("Adjusting scale for medium screens");
     if (object) {
-      object.scale.set(23, 23, 23);
+      object.scale.set(13, 13, 13);
       object.position.set(-55, 50, 0);
     }
   } else {
     console.log("Adjusting scale for large screens");
     if (object) {
-      object.scale.set(10, 10, 10);
-      object.position.set(-17, 28, 0);
+      object.scale.set(9, 9, 9);
+      object.position.set(-30, 15, 0);
     }
   }
 }

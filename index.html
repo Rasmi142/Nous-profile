@@ -38,6 +38,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   </head>
@@ -522,46 +526,49 @@
     <main id="view-main">
     
       <div class="hero-section-unique" style="background-color: #000000;">
-        <div id="tsparticles" class="tsparticle-unique"></div>
-        <div class="hero-content-unique">
-            <div class="hero-inner">
-                <div id="laptop" class="laptop"></div>
-                <div class="overlay-unique">
-                    <div class="c-hm-tt-body">
-                        <div class="c-cl re a-fd-m js-c js-iv" data-shown="1" data-visible="1">
-                            <span class="w" data-split-word="We" data-d="0">
-                                <span class="c" data-dd="0" data-split-char="W">W</span>
-                                <span class="c" data-dd="1" data-split-char="e" style="margin-right:6rem;">e</span>
-                            </span>
-                            <span class="s"> </span>
-                            <span class="w" data-split-word="create" data-d="4">
-                                <span class="c" data-dd="0" data-split-char="c">c</span>
-                                <span class="c" data-dd="1" data-split-char="r">r</span>
-                                <span class="c" data-dd="2" data-split-char="e">e</span>
-                                <span class="c" data-dd="3" data-split-char="a">a</span>
-                                <span class="c" data-dd="4" data-split-char="t">t</span>
-                                <span class="c" data-dd="5" data-split-char="e" style="margin-right: 6rem;">e</span>
-                            </span>
-                            <span class="s"> </span>
-                            <span class="w" data-split-word="a" data-d="8">
-                                <span class="c" data-dd="0" data-split-char="a">a</span>
-                            </span>
+        <div class="hero-inner">
+            <div id="tsparticles" class="tsparticle-unique"></div>
+            <div class="hero-content-unique">
+                <div class="hero-inner">
+                    <div id="laptop" class="laptop" style="z-index: 99;"></div>
+                    <div class="overlay-unique">
+                        <div class="c-hm-tt-body">
+                            <div class="c-cl re a-fd-m js-c js-iv" data-shown="1" data-visible="1">
+                                <span class="w" data-split-word="We" data-d="0">
+                                    <span class="c" data-dd="0" data-split-char="W">W</span>
+                                    <span class="c" data-dd="1" data-split-char="e" style="margin-right:6rem;">e</span>
+                                </span>
+                                <span class="s"> </span>
+                                <span class="w" data-split-word="create" data-d="4">
+                                    <span class="c" data-dd="0" data-split-char="c">c</span>
+                                    <span class="c" data-dd="1" data-split-char="r">r</span>
+                                    <span class="c" data-dd="2" data-split-char="e">e</span>
+                                    <span class="c" data-dd="3" data-split-char="a">a</span>
+                                    <span class="c" data-dd="4" data-split-char="t">t</span>
+                                    <span class="c" data-dd="5" data-split-char="e" style="margin-right: 6rem;">e</span>
+                                </span>
+                                <span class="s"> </span>
+                                <span class="w" data-split-word="a" data-d="8">
+                                    <span class="c" data-dd="0" data-split-char="a">a</span>
+                                </span>
+                            </div>
                         </div>
+                        
+                        <div class="a-cl js-iv f-24 re" data-shown="1" data-visible="1">
+                            <div class="o">
+                                <div class="t" data-d="4">Digital Experience and</div>
+                            </div>
+                            <div class="o">
+                                <div class="t2" data-d="8">Visual Expression.</div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
-                    <div class="a-cl js-iv f-24 re" data-shown="1" data-visible="1">
-                        <div class="o">
-                            <div class="t" data-d="4">Digital Experience and</div>
-                        </div>
-                        <div class="o">
-                            <div class="t2" data-d="8">Visual Expression.</div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
     </div>
+    
     
       </div>
           <!-- Page -->
@@ -618,12 +625,11 @@
               </div>
               
 
-                  <div class="wrapper" style="background-color: #000000; color:white; z-index:-1; border-radius:35px;">
+                  <div class="wrapper" style="background-color: #000000; color:white; z-index:1; border-radius:35px;">
                       <div class="c-col-12">
 
                           <!-- Infinite Tabs -->
                           <div class="nayla-infinite-tabs" data-duration="0.5">
-                            <!-- <div id="tsparticles" class="tsparticle-unique"></div> -->
                               <!-- Titles Wrap -->
                               <ul class="tab-title-wrap">
 
@@ -1081,7 +1087,7 @@
         <div class="grid1">
           <div class="grid-col1 grid-col-left1">
             <div class="media-wrapper1">
-              <div id="canvas-container"></div>
+              <div id="canvas-container" class="planet"></div>
             </div>
           </div>
           <div class="grid-col1 grid-col-right1">
@@ -1742,7 +1748,7 @@
                         ><span class="cb-btn_cta-ripple"><span></span></span
                         ><span class="cb-btn_cta-title"
                           ><span data-text="info@cuberto.com"
-                            >info@cuberto.com</span
+                            >nousinfotecq@gmail.com</span
                           ></span
                         ></a
                       >
@@ -1754,10 +1760,24 @@
                         ><span class="cb-btn_cta-border"></span
                         ><span class="cb-btn_cta-ripple"><span></span></span
                         ><span class="cb-btn_cta-title"
-                          ><span data-text="+1 301 549 9309"
-                            >+1 301 549 9309</span
+                          ><span data-text="9384102425"
+                            >9384102425</span
                           ></span
-                        ></a
+                        >
+                        </a>
+                        <a
+                        class="cb-btn cb-btn_cta -sm -inverse"
+                        href="tel:+13015499309"
+                        ><span class="cb-btn_cta-border"></span
+                        ><span class="cb-btn_cta-ripple"><span></span></span
+                        ><span class="cb-btn_cta-title"
+                          >
+                        <span class="cb-btn_cta-title"
+                          ><span data-text="9952422658"
+                            >9952422658</span
+                          ></span
+                        >
+                        </a
                       >
                     </div>
                   </div>
@@ -1804,6 +1824,73 @@
         webvisor: true,
       });
     </script>
+    <!-- footer section js starts -->
+    <script id="vertShader" type="text/x-glsl">
+      precision mediump float;
+      varying vec2 vUv;
+      attribute vec2 a_position;
+  
+      void main() {
+          vUv = .5 * (a_position + 1.);
+          gl_Position = vec4(a_position, 0.0, 1.0);
+      }
+    </script>
+  
+    <script id="fragShader" type="text/x-glsl">
+      precision mediump float;
+      varying vec2 vUv;
+      uniform float u_time;
+      uniform float u_ratio;
+      uniform vec2 u_pointer_position;
+      uniform float u_scroll_progress;
+    
+      vec2 rotate(vec2 uv, float th) {
+          return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+      }
+    
+      float neuro_shape(vec2 uv, float t, float p) {
+          vec2 sine_acc = vec2(0.);
+          vec2 res = vec2(0.);
+          float scale = 8.;
+    
+          for (int j = 0; j < 15; j++) {
+              uv = rotate(uv, 1.);
+              sine_acc = rotate(sine_acc, 1.);
+              vec2 layer = uv * scale + float(j) + sine_acc - t;
+              sine_acc += sin(layer);
+              res += (.5 + .5 * cos(layer)) / scale;
+              scale *= (1.2 - .07 * p);
+          }
+          return res.x + res.y;
+      }
+    
+      void main() {
+          vec2 uv = .5 * vUv;
+          uv.x *= u_ratio;
+    
+          vec2 pointer = vUv - u_pointer_position;
+          pointer.x *= u_ratio;
+          float p = clamp(length(pointer), 0., 1.);
+          p = .5 * pow(1. - p, 2.);
+    
+          float t = .001 * u_time;
+          vec3 color = vec3(0.);
+    
+          float noise = neuro_shape(uv, t, p);
+    
+          noise = 1.2 * pow(noise, 3.);
+          noise += pow(noise, 10.);
+          noise = max(.0, noise - .5);
+          noise *= (1. - length(vUv - .5));
+    
+          // Set the fixed color
+          color = vec3(0.776, 0.321, 0.924); // This is #c552ec
+    
+          color = color * noise;
+    
+          gl_FragColor = vec4(color, noise);
+      }
+    </script>
     <noscript
       ><div>
         <img
@@ -1817,7 +1904,6 @@
     <script src="assets/js/gsap.js"></script>
     <script src="assets/js/scroll.js"></script>
     <script src="js/background-animation.js"></script>
-    <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>

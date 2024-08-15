@@ -6602,7 +6602,6 @@ section:after {
   opacity: 1;
   display: block;
 }
-
 .hero-section-unique {
   position: relative;
   width: 100%;
@@ -6612,7 +6611,9 @@ section:after {
   align-items: center;
   justify-content: center;
 }
-
+.hero-inner {
+  position: relative;
+}
 /* Content wrapper styling */
 .hero-content-unique {
   display: flex;
@@ -6620,6 +6621,8 @@ section:after {
   justify-content: center; /* Center horizontally */
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 /* Background video styling */
@@ -6750,9 +6753,7 @@ section:after {
 
 /* General section styles */
 .about-us1 {
-  padding: 0 20px 10rem 20px; /* Adjust padding as needed */
-  background-color: #f9f9f9; /* Light background color */
-  z-index: 98;
+  padding: 0 20px 10rem 20px;
 }
 
 /* Content wrapper */
@@ -6867,7 +6868,13 @@ section:after {
   }
 }
 .tsparticle-unique {
-  z-index: -1;
+  z-index: 0; /* Set to 0 or a lower number to ensure it stays behind other content */
+  position: absolute; /* Positioned absolutely to cover the hero section */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .c-hm-tt-body {
   display: flex;
@@ -6884,12 +6891,13 @@ section:after {
 .c-cl {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping */
-  font-size: 120px; /* Large font size */
+  font-size: 160px; /* Large font size */
   line-height: 1; /* Ensure line height doesn't affect the layout */
   text-transform: uppercase;
   color: rgb(208, 73, 223);
   white-space: nowrap; /* Prevent line breaks */
-  letter-spacing: -4rem;
+  letter-spacing: -3rem;
+  font-family: "Orbitron", sans-serif;
 }
 
 .w {
@@ -6915,6 +6923,16 @@ section:after {
   position: absolute;
   top: 36rem;
 }
-.laptop {
-  width: 50vw !important;
+canvas#neuro {
+  position: absolute;
+  background-color: #151912 !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  pointer-events: none;
+  opacity: 0.95;
+}
+.planet {
+  z-index: 5 !important;
 }

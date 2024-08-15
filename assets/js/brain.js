@@ -55,7 +55,7 @@ loader.load(
     console.log("3D model loaded successfully");
     object = gltf.scene;
     object.scale.set(5, 5, 5);
-    object.position.set(-57, 28, 0);
+    object.position.set(-22, 28, 0);
 
     object.traverse((child) => {
       if (child.isMesh) {
@@ -123,7 +123,7 @@ function adjustScale() {
     console.log("Adjusting scale for large screens");
     if (object) {
       object.scale.set(60, 60, 60);
-      object.position.set(-47, 60, 0);
+      object.position.set(-50, 40, 0);
     }
   }
 }
