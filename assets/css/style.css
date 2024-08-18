@@ -6744,7 +6744,11 @@ section:after {
   max-width: 1200px; /* Adjust as needed */
   width: 100%;
 }
-
+#world {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
 /* Grid layout */
 .grid1 {
   display: flex;

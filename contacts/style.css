@@ -6946,3 +6946,13 @@ blockquote .cb-overview-text p:last-of-type:after {
     transform: scaleX(1);
   }
 }
+canvas#neuro {
+  position: absolute;
+  background-color: #151912 !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  pointer-events: none;
+  opacity: 0.95;
+}
