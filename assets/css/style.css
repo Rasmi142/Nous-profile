@@ -5989,7 +5989,7 @@ h2,
 
 h3,
 .text-h3 {
-  font-size: 51px;
+  font-size: 45px;
   line-height: 62px;
   font-weight: 400;
   letter-spacing: -0.03em;
@@ -6600,26 +6600,6 @@ section:after {
   z-index: 1;
 }
 
-/* Background video styling */
-.bg-video-unique {
-  position: absolute; /* Use absolute positioning */
-  width: 70%;
-  height: 80%;
-  z-index: 1; /* Keep the video behind other content */
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  border: 1px solid rgb(27, 27, 27); /* Solid border with a dark color */
-  border-radius: 30px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(237, 12, 245, 0.2); /* Shadow with offset, blur, and color */
-}
-
-.bg-video-unique video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the container */
-}
-
 /* Overlay styling */
 .overlay-unique {
   position: absolute; /* Positioned on top of the video */
@@ -6723,13 +6703,13 @@ section:after {
 #canvas-container {
   width: 100vw;
   height: 100vh;
-  z-index: 999 !important;
-  background-color: white;
+  z-index: 99 !important;
 }
 
 /* General section styles */
 .about-us1 {
   padding: 0 20px 10rem 20px;
+  z-index: 99 !important;
 }
 
 /* Content wrapper */
@@ -6945,6 +6925,7 @@ header {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 100px) !important;
+  z-index: 1;
 }
 
 video {
@@ -6958,30 +6939,31 @@ video {
 .content-overlay {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 40%;
   transform: translateX(-50%);
   color: white;
   text-align: center;
   z-index: 10;
 }
 .content-overlay p {
-  font-size: 50px;
+  font-size: 4vw;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
-  line-height: 63px;
+  line-height: 6vw;
 }
+
 .step-1,
 .step-2,
 .step-3 {
   margin: 0;
-  background-color: purple;
+  background-color: #c552ec;
   /* padding: 10px; */
   /* border-radius: 5px; */
   position: relative;
-  margin-left: 5rem;
+  margin-left: 10vw;
   width: 100%;
-  max-width: 600px;
+  max-width: 60vw;
 }
 
 /* .step-1 {
@@ -7004,70 +6986,34 @@ video {
 } */
 
 .step-3 {
-  font-size: 20px;
+  font-size: 2vw;
   width: 100%;
-  max-width: 350px;
-  margin-left: 6rem;
+  max-width: 35vw !important;
+  margin-left: 10vw;
   left: 50%;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   transform: translateX(-50%);
-  -webkit-text-stroke-width: 3px !important;
+  -webkit-text-stroke-width: 0.3vw !important;
   -webkit-text-stroke-color: white !important;
-  color: purple;
-  letter-spacing: 3px;
+  color: #c552ec;
+  letter-spacing: 0.3vw;
 }
 .step-2 {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-@media (max-width: 768px) {
-  .content-overlay p {
-    font-size: 4vw;
-  }
-
+@media (max-width: 1030px) {
   .step-1,
   .step-2,
   .step-3 {
-    max-width: 100%;
-    font-size: 5vw;
+    margin-left: 9vw;
   }
-
-  .step-1 {
-    margin-left: 3rem;
-    width: 270px;
-  }
-  .step-2 {
-    margin-left: 2rem;
-    width: 250px;
-  }
-
   .step-3 {
-    width: 200px;
-    margin-left: 2rem;
-    font-size: 6vw;
-    -webkit-text-stroke-width: 1px !important;
+    margin-left: 10vw;
+    max-width: 35vw;
   }
 }
-
-@media (max-width: 480px) {
-  .content-overlay p {
-    font-size: 6vw;
-  }
-
-  .step-1,
-  .step-2,
-  .step-3 {
-    max-width: 100%;
-    font-size: 8vw;
-  }
-
-  .step-3 {
-    font-size: 10vw;
-    -webkit-text-stroke-width: 0.5px !important;
-  }
-}
-
 /* portfolio */
 .outer-section-w {
   background-color: white;
@@ -7661,4 +7607,54 @@ a.portfolio-5-link:hover .portfolio-5-image img {
 
 a.portfolio-5-link:hover .portfolio-5-title span {
   background-size: 100% 1px;
+}
+.hero-section-unique1 {
+  position: relative;
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.agency-title p {
+  font-size: 2rem;
+}
+.nayla-button a {
+  font-size: 2rem;
+}
+.nayla-button a:visited {
+  color: #000;
+}
+
+.portfolio-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-video {
+  opacity: 1;
+}
+.color {
+  color: white;
+}
+
+.toggle-bg {
+  background-color: #4b5563;
+}
+
+.dot {
+  transition: transform 0.3s ease-in-out;
+}
+
+input:checked ~ .toggle-bg {
+  background-color: #2563eb;
+}
+
+input:checked ~ .toggle-bg .dot {
+  transform: translateX(1.25rem);
 }

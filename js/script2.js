@@ -256,3 +256,44 @@ function handleMouseMove(e) {
 function handleWindowResize() {
   width = window.innerWidth;
 }
+
+// portfolio
+document.querySelectorAll(".portfolio-item").forEach((item) => {
+  const video = item.querySelector(".portfolio-video");
+
+  item.addEventListener("mouseover", () => {
+    if (video) {
+      video.play();
+    }
+  });
+
+  item.addEventListener("mouseout", () => {
+    if (video) {
+      video.pause();
+      video.currentTime = 0; // Optionally reset video to the beginning
+    }
+  });
+});
+
+const toggle = document.getElementById("toggle");
+const basicPrice = document.getElementById("basic-price");
+const startupPrice = document.getElementById("startup-price");
+const enterprisePrice = document.getElementById("enterprise-price");
+const pricingDescription = document.getElementById("pricing-description");
+
+toggle.addEventListener("change", function () {
+  if (this.checked) {
+    // Annual pricing
+    basicPrice.textContent = "100";
+    startupPrice.textContent = "240";
+    enterprisePrice.textContent = "350";
+    pricingDescription.innerHTML = "Save more with annual plans!";
+  } else {
+    // Monthly pricing
+    basicPrice.textContent = "10";
+    startupPrice.textContent = "24";
+    enterprisePrice.textContent = "35";
+    pricingDescription.innerHTML =
+      "Choose a plan that works best for you and<br /> your team.";
+  }
+});
