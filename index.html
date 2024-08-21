@@ -44,7 +44,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
 
 
     <!-- JavaScript -->
@@ -561,7 +561,7 @@
               </div>
               
 
-                  <div class="wrapper" style="background-color: #000000; color:white; z-index:-1; border-radius:35px;">
+                  <div class="wrapper" style="background-color: #000000; color:white; z-index:1; border-radius:35px;">
                       <div class="c-col-12">
 
                           <!-- Infinite Tabs -->
@@ -615,7 +615,11 @@
                                           <!-- Single Image -->
                                           <div class="single-image">
 
-                                              <img alt="Single Image" src="images/RWY7098-1-823x960.jpg">
+                                            <video autoplay muted loop disablepictureinpicture>
+                                              <source src="assets/vid/approach.mp4" type="video/mp4">
+                                              Your browser does not support the video tag.
+                                          </video>
+
 
                                           </div>
                                           <!--/ Single Image -->
@@ -695,7 +699,7 @@
                                           <!-- Text -->
                                           <div class="text-wrapper" style="width: 90%">
 
-                                              <p>From designers to strategists, writers to technologists, we foster a collaborative environment that encourages cross-pollination of ideas and perspectives. This collective synergy allows us to push boundaries and create truly exceptional work.
+                                              <p >From designers to strategists, writers to technologists, we foster a collaborative environment that encourages cross-pollination of ideas and perspectives. This collective synergy allows us to push boundaries and create truly exceptional work.
                                               </p>
 
                                           </div>
@@ -810,9 +814,12 @@
 
                                           <!-- Single Image -->
                                           <div class="single-image">
+                                            <video autoplay muted loop disablepictureinpicture>
+                                              <source src="assets/vid/mission.mp4" type="video/mp4">
+                                              Your browser does not support the video tag.
+                                          </video>
 
-                                              <img alt="Single Image" src="images/agency_vertical.jpg">
-
+                                            
                                           </div>
                                           <!--/ Single Image -->
 
@@ -1006,7 +1013,14 @@
                         <div class="grid1">
                           <div class="grid-col1 grid-col-left1">
                             <div class="media-wrapper1">
-                              <div id="canvas-container" class="planet"></div>
+                              <div class="cube">
+                                <div class="cube__face cube__face--front-side"></div>
+                                <div class="cube__face cube__face--back-side"></div>
+                                <div class="cube__face cube__face--left-side"></div>
+                                <div class="cube__face cube__face--right-side"></div>
+                                <div class="cube__face cube__face--top-side"></div>
+                                <div class="cube__face cube__face--bottom-side"></div>
+                              </div>
                             </div>
                           </div>
                           <div class="grid-col1 grid-col-right1">
@@ -1070,9 +1084,9 @@
               <div class="col-md-7 col-lg-8 mb-sm-30 mb-xs-20">
                 <div class="portfolio-3-image">
                   <a href="#">
-                    <img src="assets/portfolio/1_1.jpg" alt="Image Description" class="portfolio-image" />
+                    <img src="assets/vid/portfolio assets/project 1 cover img.jpg" alt="Image Description" class="portfolio-image" />
                     <video class="portfolio-video" preload="none" muted>
-                      <source src="assets/vid/51202235.mp4" type="video/mp4">
+                      <source src="assets/vid/portfolio assets/project 1 vid.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </a>
@@ -1112,9 +1126,9 @@
               <div class="col-md-7 col-lg-8 mb-sm-30 mb-xs-20 order-first order-md-last">
                 <div class="portfolio-3-image">
                   <a href="#">
-                    <img src="assets/portfolio/2_1.jpg" alt="Image Description" class="portfolio-image" />
+                    <img src="assets/vid/portfolio assets/project 2 cover img.jpg" alt="Image Description" class="portfolio-image" />
                     <video class="portfolio-video" preload="none" muted>
-                      <source src="assets/vid/about-bg.mp4" type="video/mp4">
+                      <source src="assets/vid/portfolio assets/project 2 vid.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </a>
@@ -1130,9 +1144,9 @@
               <div class="col-md-7 col-lg-8 mb-sm-30 mb-xs-20">
                 <div class="portfolio-3-image">
                   <a href="#">
-                    <img src="assets/portfolio/3_1.jpg" alt="Image Description" class="portfolio-image" />
+                    <img src="assets/vid/portfolio assets/project 3 cover img.jpg" alt="Image Description" class="portfolio-image item-3" />
                     <video class="portfolio-video" preload="none" muted>
-                      <source src="assets/vid/IMG_0377.MP4" type="video/mp4">
+                      <source src="assets/vid/portfolio assets/project 3 vid.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </a>
@@ -1172,7 +1186,7 @@
               <div class="col-md-7 col-lg-8 mb-sm-30 mb-xs-20 order-first order-md-last">
                 <div class="portfolio-3-image">
                   <a href="modern-portfolio-single.html">
-                    <img src="assets/portfolio/4_1.jpg" alt="Image Description" class="portfolio-image" />
+                    <img src="assets/vid/portfolio assets/project 4 cover pic.png" alt="Image Description" class="portfolio-image" />
                     <video class="portfolio-video" preload="none" muted>
                       <source src="assets/vid/NOUS HERO SECTION VID.mp4" type="video/mp4">
                       Your browser does not support the video tag.
@@ -1192,128 +1206,7 @@
   
   
 
-  <section class="font-sans bg-gray-100 w-full">
-    <div class="min-h-screen flex justify-center items-center w-full">
-        <div class="w-full px-4 md:px-8">
-            <div class="text-center font-semibold">
-                <h1 class="text-5xl">
-                    <span class="text-blue-700 tracking-wide">Flexible </span>
-                    <span>Plans</span>
-                </h1>
-                <p id="pricing-description" class="pt-6 text-xl text-gray-400 font-normal">
-                    Choose a plan that works best for you and<br /> your team.
-                </p>
-
-                <!-- Toggle Button -->
-                <div class="flex justify-center items-center space-x-4 pt-6">
-                    <span class="font-medium text-gray-500">Monthly</span>
-                    <label for="toggle" class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" id="toggle" class="sr-only">
-                        <div class="w-11 h-6 bg-gray-200 rounded-full toggle-bg">
-                            <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full"></div>
-                        </div>
-                    </label>
-                    <span class="font-medium text-gray-500">Annually</span>
-                </div>
-            </div>
-            <div class="pt-24 flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0 md:space-x-10">
-                <!-- Basic Card -->
-                <div class="w-full max-w-sm p-8 bg-white text-center rounded-3xl shadow-xl">
-                    <h1 class="text-black font-semibold text-2xl">Basic</h1>
-                    <p class="pt-2 tracking-wide">
-                        <span class="text-gray-400 align-top">$ </span>
-                        <span id="basic-price" class="text-3xl font-semibold">10</span>
-                        <span class="text-gray-400 font-medium">/ user</span>
-                    </p>
-                    <hr class="mt-4 border-1">
-                    <div class="pt-8">
-                        <p class="font-semibold text-gray-400 text-left">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2">Get started with <span class="text-black">messaging</span></span>
-                        </p>
-                        <p class="font-semibold text-gray-400 text-left pt-5">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2">Flexible <span class="text-black">team meetings</span></span>
-                        </p>
-                        <p class="font-semibold text-gray-400 text-left pt-5">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2"><span class="text-black">5 TB</span> cloud storage</span>
-                        </p>
-                        <a href="#">
-                            <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
-                                <span class="font-medium">Choose Plan</span>
-                                <span class="pl-2 material-icons align-middle text-sm">east</span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <!-- StartUp Card -->
-                <div class="w-full max-w-sm p-8 bg-gray-900 text-center rounded-3xl text-white shadow-xl border-4 border-white transform scale-105">
-                    <h1 class="text-white font-semibold text-2xl">Startup</h1>
-                    <p class="pt-2 tracking-wide">
-                        <span class="text-gray-400 align-top">$ </span>
-                        <span id="startup-price" class="text-3xl font-semibold">24</span>
-                        <span class="text-gray-400 font-medium">/ user</span>
-                    </p>
-                    <hr class="mt-4 border-1 border-gray-600">
-                    <div class="pt-8">
-                        <p class="font-semibold text-gray-400 text-left">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2">All features in <span class="text-white">Basic</span></span>
-                        </p>
-                        <p class="font-semibold text-gray-400 text-left pt-5">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2">Flexible <span class="text-white">call scheduling</span></span>
-                        </p>
-                        <p class="font-semibold text-gray-400 text-left pt-5">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2"><span class="text-white">15 TB</span> cloud storage</span>
-                        </p>
-                        <a href="#">
-                            <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
-                                <span class="font-medium">Choose Plan</span>
-                                <span class="pl-2 material-icons align-middle text-sm">east</span>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="absolute top-4 right-4">
-                        <p class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
-                    </div>
-                </div>
-                <!-- Enterprise Card -->
-                <div class="w-full max-w-sm p-8 bg-white text-center rounded-3xl shadow-xl">
-                    <h1 class="text-black font-semibold text-2xl">Enterprise</h1>
-                    <p class="pt-2 tracking-wide">
-                        <span class="text-gray-400 align-top">$ </span>
-                        <span id="enterprise-price" class="text-3xl font-semibold">35</span>
-                        <span class="text-gray-400 font-medium">/ user</span>
-                    </p>
-                    <hr class="mt-4 border-1">
-                    <div class="pt-8">
-                        <p class="font-semibold text-gray-400 text-left">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2">All features in <span class="text-black">Startup</span></span>
-                        </p>
-                        <p class="font-semibold text-gray-400 text-left pt-5">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2">Growth <span class="text-black">oriented</span></span>
-                        </p>
-                        <p class="font-semibold text-gray-400 text-left pt-5">
-                            <span class="material-icons align-middle">done</span>
-                            <span class="pl-2"><span class="text-black">Unlimited</span> cloud storage</span>
-                        </p>
-                        <a href="#">
-                            <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
-                                <span class="font-medium">Choose Plan</span>
-                                <span class="pl-2 material-icons align-middle text-sm">east</span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  
 
 
       <section class="cb-smfeed">
