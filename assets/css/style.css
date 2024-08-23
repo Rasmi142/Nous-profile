@@ -6521,6 +6521,8 @@ section:after {
   list-style: none;
   padding: 0;
   position: relative;
+  z-index: 5 !important;
+  background-color: #323233;
 }
 
 .nayla-infinite-tabs .tab-title {
@@ -6549,6 +6551,7 @@ section:after {
   position: relative;
   width: 100%;
   padding-top: 100px;
+  z-index: -3 !important;
 }
 
 .nayla-infinite-tabs .tab-contents-wrap::before {
@@ -6786,7 +6789,7 @@ section:after {
 .cta-button1 {
   display: inline-block;
   text-decoration: none;
-  padding: 12px 24px;
+  padding: 1vw 0 0 3vw;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7058,7 +7061,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   padding: 10px 20px;
 }
@@ -7813,4 +7816,36 @@ input:checked ~ .toggle-bg .dot {
   height: 400px !important;
   object-fit: cover;
   object-position: center;
+}
+.founder-name-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.founder-img {
+  width: 10rem !important;
+  height: 10rem !important;
+}
+
+.founder-img img {
+  border-radius: 5rem;
+  width: 10rem !important;
+  height: 10rem !important;
+  object-fit: cover;
+  object-position: center;
+}
+.founder-description h4,
+.founder-description p {
+  font-family: "Outfit", sans-serif;
+}
+
+.founder-description p {
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 10vw;
+  height: auto;
 }
